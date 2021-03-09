@@ -1,6 +1,15 @@
-node {
-    stage('configFile Plugin')
-    {
-        println "Jenkins work"
+pipeline {
+    agent {
+       label "мастер"
+    }
+    stages {
+       stage("connect") {
+          steps {
+            script {
+                sh "make image push"
+            }
+          }
+       }
     }
 }
+
