@@ -1,1 +1,3 @@
-RUN apt-get update && apt-get install curl -y
+FROM ubuntu:latest
+RUN apt-get update
+CMD ["echo", "Hello World!"]
