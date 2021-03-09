@@ -3,6 +3,6 @@
        label "мастер"
     }
     stages {
-        println "hello"
+     println "hello"
     }
 }
