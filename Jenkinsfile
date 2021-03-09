@@ -1,6 +1,6 @@
  pipeline {
     agent {
-       label "deploy"
+       label "worker"
     }
     stages {
        stage("connect") {
