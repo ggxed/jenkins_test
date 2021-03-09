@@ -2,14 +2,11 @@ pipeline {
     agent {
        label "мастер"
     }
-    stages {
-       stage("connect") {
-          steps {
-            script {
-                sh "make image push"
-            }
-          }
-       }
+    node {
+        stage('configFile Plugin')
+        {
+            println "hello"
+        }
     }
 }
 
