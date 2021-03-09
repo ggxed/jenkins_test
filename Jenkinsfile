@@ -1,16 +1,6 @@
-pipeline 
-{
-    agent 
+node {
+    stage('configFile Plugin')
     {
-       label 'мастер'
-    }
-    stages {
-       stage("connect") {
-          steps {
-            script {
-                sh "make image push"
-            }
-          }
-       }
+        println "hello"
     }
 }
