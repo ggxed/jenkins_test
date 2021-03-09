@@ -1,6 +1,6 @@
 node {
     stage('configFile Plugin')
     {
-        println "hello"
+        println "Jenkins work"
     }
 }
