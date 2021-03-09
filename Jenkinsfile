@@ -2,23 +2,15 @@ pipeline
 {
     agent 
     {
-       label 'pipe'
+       label 'мастер'
     }
-    stages 
-    {
-
-        stage("connect to dockerhub")
-       {
-
-          steps
-          {
-                sh 'make image '
-                sh 'make push '
-
-           }
+    stages {
+       stage("connect") {
+          steps {
+            script {
+                sh "make image push"
+            }
+          }
        }
-
     }
-
 }
-
