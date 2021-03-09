@@ -1,9 +1,15 @@
- pipeline {
+pipeline {
     agent {
-       label "мастер"
+       label "deploy"
     }
-     stage('configFile Plugin')
-    {
-        println "hello"
+    stages {
+       stage("connect") {
+          steps {
+            script {
+                println 'hello'
+                sh "make image push"
+            }
+          }
+       }
     }
 }
