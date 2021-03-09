@@ -2,7 +2,8 @@
     agent {
        label "мастер"
     }
-    stages {
-     println "hello"
+     stage('configFile Plugin')
+    {
+        println "hello"
     }
 }
