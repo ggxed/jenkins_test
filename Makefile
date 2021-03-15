@@ -13,9 +13,7 @@ image:
 
 
 push:
-	docker login -u scherbet -p '0d92f365-316d-4ed8-a491-94247ea877ee'
+	docker login -u ggxed -p '140870ec-2f5b-404d-85a2-64e20cf05237'
 	docker tag ${BASE_IMAGE} ${VERSION_IMAGE}
 	docker push ${BASE_IMAGE}
 	docker push ${VERSION_IMAGE}
-	#docker tag ${BASE_IMAGE} ${BRANCH_IMAGE}
-	#docker push ${REGISTRY}/${NAME}:${VERSION}-$(BRANCH)
