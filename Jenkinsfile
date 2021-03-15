@@ -12,5 +12,4 @@ pipeline {
           sh "ls -ltr"
        }
     }
-   } 
-}
+} 
