@@ -2,14 +2,15 @@ pipeline {
     agent {
        label "worker"
     }
-    stages {
-       stage("connect") {
-          steps {
-            script {
-                println 'hello'
-                sh "make image push"
-            }
-          }
+    tage("Build") {
+       steps {
+          // Just print a Hello, Pipeline to the console
+          echo "Hello, Pipeline!"
+          // Compile a Java file. This requires JDKconfiguration from Jenkins
+          py test_Main.py     
+          py test_Main 
+          sh "ls -ltr"
        }
     }
+   } 
 }
