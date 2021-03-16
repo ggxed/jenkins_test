@@ -1,5 +1,5 @@
-REGISTRY 		:= smartspace
-NAME 			:= storage
+REGISTRY 		:= ggxed
+NAME 			:= git_test
 VERSION 		:= 0.0.2
 
 BASE_IMAGE 		:= ${REGISTRY}/${NAME}
