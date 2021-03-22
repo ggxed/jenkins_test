@@ -126,6 +126,7 @@ def main(filename):
 
 if __name__ == '__main__':
     main('LR1_1.AVI')
+    print("hello")
 
 
 
