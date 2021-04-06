@@ -1,9 +1,7 @@
-pipeline {
-    agent {
-       label "master"
-    }
-    stage{
+node {
+    stage('configFile Plugin')
+    {
         println "hello"
-        }
+        println "test IDE"
+    }
 }
-
