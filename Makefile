@@ -21,4 +21,3 @@ push:
 pull:
 	docker login -u scherbet -p '140870ec-2f5b-404d-85a2-64e20cf05237'
 	docker pull ${REGISTRY}/${NAME}:${VERSION}
-© 2021 GitHub, Inc.
