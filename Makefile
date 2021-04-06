@@ -13,12 +13,12 @@ image:
 	
 
 push:
-	docker login -u scherbet -p '7ffd023c-3aa8-45b2-9af8-090f157f6668'
+	docker login -u ggxed -p '7ffd023c-3aa8-45b2-9af8-090f157f6668'
 	docker tag ${BASE_IMAGE} ${VERSION_IMAGE}
 	docker push ${BASE_IMAGE}
 	docker push ${VERSION_IMAGE}
 	#docker tag ${BASE_IMAGE} ${BRANCH_IMAGE}
 	#docker push ${REGISTRY}/${NAME}:${VERSION}-$(BRANCH)
 pull:
-	docker login -u scherbet -p '7ffd023c-3aa8-45b2-9af8-090f157f6668'
+	docker login -u ggxed -p '7ffd023c-3aa8-45b2-9af8-090f157f6668'
 	docker pull ${REGISTRY}/${NAME}:${VERSION}
