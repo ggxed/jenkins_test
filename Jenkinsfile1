@@ -1,14 +1,18 @@
 pipeline {
     agent {
-       label "worker"
+       label "master"
     }
     stages {
-       stage("connect") {
-          steps {
-            script {
-                sh "make image push"
-            }
+          stage("connect") {
+             steps {
+               script {
+                   sh '''
+                   make image push VERSION=test_valek 
+                   make image pull VERSION=test_valek
+                   '''
+                   
+               }
+             }
           }
-       }
-    }
+        }
 }
