@@ -16,6 +16,9 @@ sudo systemctl start jenkins
 
 ## RSA SSH on Worker
 sudo apt-get default-jdk
+
 cd ~/.ssh/ && ssh-keygen -t rsa
+
 cat id_rsa.pub>>authorized_keys
+
 cat id_rsa
