@@ -1,0 +1,41 @@
+version: 2
+updates:
+  # Бэкенд - Конфигурация Maven + Tycho
+  - package-ecosystem: "maven"
+    directory: "/backend" # Измените, если ваши файлы Maven находятся в другом каталоге
+    schedule:
+      interval: "weekly"
+    labels:
+      - "backend"
+      - "java"
+    ignore:
+      # Добавьте любые конкретные версии или зависимости, которые вы хотите игнорировать
+
+  # Фронтенд - Конфигурация TypeScript + Lerna
+  - package-ecosystem: "npm"
+    directory: "/frontend" # Измените, если ваши файлы TypeScript/Lerna находятся в другом каталоге
+    schedule:
+      interval: "weekly"
+    labels:
+      - "frontend"
+      - "javascript"
+    ignore:
+      # Добавьте любые конкретные версии или зависимости, которые вы хотите игнорировать
+
+# Глобальная конфигурация для правил авто-триажирования
+auto-merge:
+  enabled: true
+  target-branch: "main" # Или любую другую ветку, которую вы хотите целить
+  method: "merge"
+
+# Определение правил для приоритезации оповещений на основе серьезности
+rules:
+  - dependency-name: "*" # Применяется ко всем зависимостям
+    severity: [ "low", "medium", "high", "critical" ]
+    actions:
+      - type: "label"
+        label: "security" # Добавляет метку к PR, которые решают проблемы безопасности
+      - type: "review-request"
+        reviewers: [ "security-team" ] # Замените на GitHub-никнеймы вашей команды
+      - type: "increase-update-schedule"
+        increase-schedule: "daily" # Увеличивает частоту для высоких и критических уязвимостей
